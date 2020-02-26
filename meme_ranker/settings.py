@@ -126,5 +126,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MEDIA_ROOT = '/home/csec/temp/meme_ranker/meme_ranker/'
+# MEDIA_ROOT = '/home/csec/temp/meme_ranker/meme_ranker/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'')
 MEDIA_URL = '/memes/'
