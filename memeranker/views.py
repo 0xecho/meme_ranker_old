@@ -24,15 +24,9 @@ class UploadMeme(generic.CreateView):
             form_of_image = modelform_factory(self.model, fields=self.fields)
             data = {"image":file}
             new_form = form_of_image(files=data)
-            # new_form.fields['image'].initial = file
-            # print(new_form.fields['image'].initial)
-            print(new_form)
             if new_form.is_valid():
                 new_form.save()
-            print(new_form.errors)
             
-
-
         return HttpResponseRedirect(self.success_url)
 
 def get_two_memes(request):
