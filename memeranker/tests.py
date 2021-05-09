@@ -55,6 +55,9 @@ class UploadMemeTestCase(TestCase):
 		c.post("/upload",{"image":open(name,"rb")})
 		self.assertTrue(Meme.objects.count()==3)
 
+	def test_must_fail(self):
+		self.assertTrue(False)
+
 	def tearDown(self):
 		for image in self.images:
 			if os.path.exists(image):
