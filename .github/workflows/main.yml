@@ -26,9 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Django Test CI
-      # You may pin to the exact commit or the version.
-      # uses: UKnowWhoIm/django-test-action@43d1964e6fbb32ebe3e6f82d63b8291764cad3a7
-      - uses: UKnowWhoIm/django-test-action@v0.6
+        uses: UKnowWhoIm/django-test-action@v0.6
         with:
           settings-dir-path: meme_ranker
           
